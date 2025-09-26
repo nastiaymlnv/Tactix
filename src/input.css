@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Figtree:wght@400;600&display=swap");
+
+@font-face {
+  font-family: "ClashDisplay";
+  src: url("/assets/fonts/ClashDisplay-Medium.woff2") format("woff2"),
+    url("/assets/fonts/ClashDisplay-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Clash_Display";
+  src: url("/assets/fonts/ClashDisplay-Medium.woff2") format("woff2"),
+    url("/assets/fonts/ClashDisplay-Medium.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .font-clash {
+    font-family: "Clash_Display", sans-serif;
+  }
+
+  .font-figtree {
+    font-family: "Figtree", sans-serif;
+  }
+
+  .nav-item {
+    @apply px-3 py-2 hover:text-white/70;
+  }
+}
