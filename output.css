@@ -3,8 +3,8 @@
 @font-face {
   font-family: "ClashDisplay";
 
-  src: url("/assets/fonts/ClashDisplay-Medium.woff2") format("woff2"),
-    url("/assets/fonts/ClashDisplay-Medium.woff") format("woff");
+  src: url("./assets/fonts/ClashDisplay-Medium.woff2") format("woff2"),
+    url("./assets/fonts/ClashDisplay-Medium.woff") format("woff");
 
   font-weight: 500;
 
@@ -12,10 +12,10 @@
 }
 
 @font-face {
-  font-family: "Clash_Display";
+  font-family: "ClashDisplay";
 
-  src: url("/assets/fonts/ClashDisplay-Medium.woff2") format("woff2"),
-    url("/assets/fonts/ClashDisplay-Medium.woff") format("woff");
+  src: url("./assets/fonts/ClashDisplay-Medium.woff2") format("woff2"),
+    url("./assets/fonts/ClashDisplay-Medium.woff") format("woff");
 
   font-weight: 600;
 
@@ -579,7 +579,7 @@ video {
 }
 
 .font-clash {
-  font-family: "Clash_Display", sans-serif;
+  font-family: "ClashDisplay", sans-serif;
 }
 
 .font-figtree {
