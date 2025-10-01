@@ -1,7 +1,18 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./index.html", "./src/**/*.{html,js}"],
-  safelist: ["font-clash", "font-figtree"],
+  safelist: [
+    "font-clash",
+    "font-figtree",
+    "before:translate-y-0",
+    "before:-translate-y-1.5",
+    "before:rotate-45",
+    "after:translate-y-0",
+    "after:translate-y-1.5",
+    "after:-rotate-45",
+    "sm:max-md:opacity-1",
+    "sm:max-md:opacity-0",
+  ],
   theme: {
     extend: {
       spacing: {

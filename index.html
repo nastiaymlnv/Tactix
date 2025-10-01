@@ -4,34 +4,73 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="./src/output.css" rel="stylesheet" />
+    <script src="index.js" defer></script>
   </head>
   <body>
     <header
-      class="font-clash font-semibold bg-black text-white flex justify-between items-center pt-7 px-24"
+      class="font-clash font-semibold bg-black text-white flex justify-between items-center pt-7 px-6 lg:px-24"
     >
+      <!-- Logo -->
       <div class="flex items-center space-x-2 text-xl">
-        <div
+        <span
           class="w-8 h-8 flex items-center justify-center rounded-full bg-white text-black"
         >
           T
-        </div>
+        </span>
         <span class="font-medium">Tactix.</span>
       </div>
-      <nav class="flex justify-between items-center text-sm">
+      <!-- Base navigation menu in the header -->
+      <nav class="hidden md:flex justify-between items-center text-sm">
         <a href="#" class="nav-item">Home</a>
         <a href="#" class="nav-item">About</a>
         <a href="#" class="nav-item">Services</a>
         <a href="#" class="nav-item">Approach</a>
         <a href="#" class="nav-item">FAQ</a>
       </nav>
-      <a
-        href="#"
-        class="font-figtree font-semibold leading-5 px-5.5 py-3 border-box border border-white/20 rounded-full bg-white/10 hover:bg-white/15 transition"
-      >
-        Contact Us
-      </a>
+
+      <div class="flex gap-4">
+        <!-- Contact us button in the header -->
+        <a
+          href="#"
+          id="contact-us-btn"
+          class="max-sm:hidden sm:max-md:opacity-1 sm:flex font-figtree font-semibold leading-4 text-center px-5.5 py-3 border border-white/20 rounded-full bg-white/10 hover:bg-white/15 transition-all duration-200"
+        >
+          Contact Us
+        </a>
+        <!-- Hamburger menu toggle button -->
+        <div
+          id="toggle-nav-menu-btn"
+          class="md:hidden flex place-items-center cursor-pointer p-3 w-11 h-11 border border-white/20 rounded-full bg-white/10"
+        >
+          <span
+            class="relative w-full h-0.5 bg-white rounded-full transition-all duration-200 before:content-[''] before:absolute before:h-0.5 before:w-full before:-translate-y-1.5 before:bg-white before:rounded-full before:transition-all before:duration-200 after:content-[''] after:absolute after:h-0.5 after:w-full after:translate-y-1.5 after:bg-white after:rounded-full after:transition-all after:duration-200"
+          ></span>
+        </div>
+      </div>
     </header>
-    <main>
+
+    <main class="relative">
+      <!-- Hamburger menu -->
+      <article
+        id="responsive-nav-menu"
+        class="hidden opacity-0 absolute w-dvw h-[calc(100dvh-4.5rem)] z-10 top-0 left-0 bg-black px-6 sm:px-12 pt-16 sm:pt-24 pb-8 sm:pb-10 flex-col justify-between transition-opacity duration-200"
+      >
+        <nav class="flex gap-2 sm:gap-4 flex-wrap">
+          <a href="#" class="hamburger-nav-item">Home</a>
+          <a href="#" class="hamburger-nav-item">About</a>
+          <a href="#" class="hamburger-nav-item">Services</a>
+          <a href="#" class="hamburger-nav-item">Approach</a>
+          <a href="#" class="hamburger-nav-item">FAQ</a>
+          <a href="#" class="hamburger-nav-item">Contact us</a>
+        </nav>
+        <ul class="flex gap-8 my-4 mx-4 w-fit">
+          <li><img src="assets/icons/LinkedIn.svg" alt="LinkedIn" /></li>
+          <li><img src="assets/icons/Facebook.svg" alt="Facebook" /></li>
+          <li><img src="assets/icons/Twitter_X.svg" alt="Twitter (X)" /></li>
+        </ul>
+      </article>
+
+      <!-- Hero section -->
       <section
         class="bg-black pt-45 pb-10 px-6 max-md:py-28 max-lg:py-36 md:max-lg:px-28 lg:px-47 flex flex-col items-center"
       >
@@ -95,6 +134,7 @@
           brands to thrive in the ever-evolving digital landscape.
         </p>
       </section>
+
       <section></section>
     </main>
   </body>
