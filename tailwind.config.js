@@ -28,6 +28,36 @@ module.exports = {
         6: "1.5rem", // 24px
         18: "4.5rem", // 72px
       },
+      padding: {
+        4.5: "18px",
+        10.5: "42px",
+      },
+      colors: {
+        "green-150": "#C2DECF",
+        "emerald-80": "#DEF1E7",
+        "emerald-750": "#246241",
+      },
+      maxWidth: {
+        85: "360px",
+      },
+      borderRadius: {
+        "5xl": "40px",
+      },
+      fontSize: {
+        "4.5xl": "44px",
+        "5.5xl": "56px",
+      },
+      transitionTimingFunction: {
+        "out-back": "cubic-bezier(0.25, 0.46, 0.45, 0.94)",
+      },
+      transitionDelay: {
+        100: "100ms",
+        200: "200ms",
+        300: "300ms",
+      },
+      willChange: {
+        "transform-opacity": "transform, opacity",
+      },
     },
   },
   plugins: [],

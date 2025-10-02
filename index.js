@@ -49,3 +49,28 @@ toggleMenuBtn.onclick = () => {
     }, 200); // Match transition duration
   }
 };
+
+// Intersection Observer for scroll animations
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.remove("card-hidden");
+        entry.target.classList.add("card-visible");
+        // Micro-delay for smooth class application
+        requestAnimationFrame(() => {
+          observer.unobserve(entry.target);
+        });
+      }
+    });
+  },
+  {
+    threshold: 0.1,
+    rootMargin: "0px 0px -100px 0px",
+  }
+);
+
+// Observe all cards
+document.querySelectorAll(".card-hidden").forEach((card) => {
+  observer.observe(card);
+});
